@@ -14,6 +14,9 @@ def load(sourceFileName, noteFileName, outputFileName):
 	create.main(sourceFileName, noteFileName, outputFileName, False, True)
 	pygame.mixer.music.load(outputFileName + ".mid")
 
+def stop():
+	pygame.mixer.stop()
+
 if __name__ == "__main__":
 	sourceFileName, noteFileName, outputFileName = ("..\\celeste", "testNotes", "Result")
 

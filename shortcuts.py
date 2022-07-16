@@ -16,7 +16,8 @@ def reload():
 bindings = [
 	[["right_shift"], reload, None],
     [["right_control"], play.play, None],
-	[["escape"], kill, None]
+	[["escape"], kill, None],
+	[["enter"], play.stop, None],
 ]
 
 
