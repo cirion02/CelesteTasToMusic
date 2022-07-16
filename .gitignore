@@ -1,2 +1,4 @@
 *.tas
 *.mid
+.vscode
+__pycache__
