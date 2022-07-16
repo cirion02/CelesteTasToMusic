@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
 	start_checking_hotkeys()
 
-	print("Keys:\nright shift: reload tas file\nright control: play the tas file\nenter: stop playing sound")
+	print("Keys:\nright shift: reload tas file\nright control: play the tas file")
 
 	while isAlive:
 		time.sleep(0.1)
