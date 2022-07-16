@@ -1,5 +1,6 @@
 from global_hotkeys import *
 import time
+import threading
 
 import play
 
@@ -13,11 +14,11 @@ def reload():
 	play.load("..\\celeste", "testNotes", "Result")
 	print("done loading")
 
+runThread = threading.Thread(target=play.play)
+
 bindings = [
 	[["right_shift"], reload, None],
-    [["right_control"], play.play, None],
-	[["escape"], kill, None],
-	[["enter"], play.stop, None],
+    [["right_control"], runThread.run, None]
 ]
 
 
@@ -30,7 +31,7 @@ if __name__ == "__main__":
 
 	start_checking_hotkeys()
 
-	print("Keys:\nesc: kill this program\nright shift: reload tas file\nright control: play the tas file\nenter: stop playing sound")
+	print("Keys:\nright shift: reload tas file\nright control: play the tas file\nenter: stop playing sound")
 
 	while isAlive:
 		time.sleep(0.1)

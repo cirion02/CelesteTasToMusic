@@ -2,3 +2,4 @@
 *.mid
 .vscode
 __pycache__
+*.exe
